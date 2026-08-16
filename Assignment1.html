@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Promise Assignment</title>
+</head>
+<body>
+    <script>
+        function codingScoreCheck(marks, cutoff) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const average = marks.reduce((a, b) => a + b, 0) / marks.length;
+                    if (average >= cutoff) {
+                        resolve(average);
+                    } else {
+                        reject(` ${average} you have not cleared the Coding Assessment.`);
+                    }
+                }, 2000);
+            });
+        }
+
+        function technicalInterviewCheck(marks, cutoff) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const average = marks.reduce((a, b) => a + b, 0) / marks.length;
+                    if (average >= cutoff) {
+                        resolve(average);
+                    } else {
+                        reject(" you have not cleared the Technical Interview.");
+                    }
+                }, 2000);
+            });
+        }
+
+        function finalSelectionCheck(codingAverage, technicalAverage, cutoff) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const finalAverage = (codingAverage + technicalAverage) / 2;
+                    if (finalAverage >= cutoff) {
+                        resolve(finalAverage);
+                    } else {
+                        reject("you have not cleared the final selection cutoff.");
+                    }
+                }, 2000);
+            });
+        }
+
+        const codingMarks = [80, 90, 85];
+        const codingCutoff = 70;
+
+        const technicalMarks = [75, 80, 85];
+        const technicalCutoff = 75;
+
+        const finalCutoff = 80;
+
+        let tempCodingAvg;
+
+        codingScoreCheck(codingMarks, codingCutoff)
+            .then((codingAvg) => {
+                console.log(`Coding Assessment Cleared! Average Score: ${codingAvg}`);
+                tempCodingAvg = codingAvg;
+                return technicalInterviewCheck(technicalMarks, technicalCutoff);
+            })
+            .then((technicalAvg) => {
+                console.log(`Technical Interview Cleared! Average Score: ${technicalAvg}`);
+                return finalSelectionCheck(tempCodingAvg, technicalAvg, finalCutoff);
+            })
+            .then((finalAvg) => {
+                console.log(`Final Selection Cleared! Final Average Score: ${finalAvg}`);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    </script>
+</body>
+</html>
