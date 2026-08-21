@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
             <head><title>Student Portal</title></head>
             <body>
                 <h1>Student Portal</h1>
-                <p>Name: Yash</p>
+                <p>Name: Piyush</p>
                 <p>Course: Full Stack Dev</p>
                 <p>College: ITM</p>
                 <p>Welcome to my project.</p>
