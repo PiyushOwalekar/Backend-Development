@@ -5,7 +5,7 @@ const server = http.createServer((req, res) => {
     if (req.url === '/student') {
         const student = {
             id: 101,
-            name: "Yash",
+            name: "Piyush",
             course: "B.tech",
             semester: 3,
             city: "Mumbai"
