@@ -29,7 +29,7 @@ app.get('/user/:name', (req, res) => {
 });
 
 app.get('/user', (req, res) => {
-    res.send('hello i am Satvik!');
+    res.send('hello i am Piyush');
 });
 
 app.get('/product/:id/:category', (req, res) => {
