@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "employeeName": "Ravi Sharma",
+    "designation": "Software Engineer",
+    "department": "IT",
+    "salary": 45000
+  },
+  {
+    "id": 2,
+    "employeeName": "satvik sahh",
+    "designation": "Backend Developer",
+    "department": "IT",
+    "salary": 50000
+  },
+  {
+    "id": 3,
+    "employeeName": "Amit Patel",
+    "designation": "HR Executive",
+    "department": "HR",
+    "salary": 40000
+  },
+  {
+    "id": 4,
+    "employeeName": "Priya Singh",
+    "designation": "UI Designer",
+    "department": "Design",
+    "salary": 48000
+  },
+  {
+    "id": 5,
+    "employeeName": "Arjun Mehta",
+    "designation": "Project Manager",
+    "department": "Management",
+    "salary": 65000
+  }
+]
